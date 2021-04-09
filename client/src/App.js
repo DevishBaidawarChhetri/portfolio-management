@@ -5,6 +5,7 @@ import About from "./components/About";
 import Dashboard from "./components/Dashboard";
 import Navbar from "./components/Navbar";
 import "./index.css";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route exact path="/dashboard" component={Dashboard} />
         <Redirect to="/" />
       </Switch>
+      <Footer />
     </>
   );
 };
