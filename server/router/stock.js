@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-require("../db/conn");
 const Stock = require("../model/stockSchema");
 
 router.post("/stock", async (req, res) => {

@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primaryColor: #035b96;
+  --secondaryColor: #3498db;
+  --blackColor: #000;
+  --transition: all 0.25s ease-in-out;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 0 5rem;
+  /* color: #565387; */
+}
+a {
+  color: var(--blackColor);
+  text-decoration: none;
+}
+nav {
+  padding: 1.5rem 0;
+}
+.nav_holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_holder a {
+  text-transform: capitalize;
+  transition: var(--transition);
+}
+.nav_holder a:hover {
+  color: var(--secondaryColor);
+}
+.home_link {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.portfolio {
+  color: var(--primaryColor);
+}
+.management {
+  color: var(--secondaryColor);
+}
+.nav_links {
+  font-size: 1.8rem;
+}
+.nav_links a {
+  color: var(--primaryColor);
+  padding-left: 0.8rem;
+}
+.menu_active {
+  color: var(--secondaryColor) !important;
 }
