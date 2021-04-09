@@ -1,10 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
+  const location = useLocation().pathname;
   return (
-    <div className="soc_links">
+    <div className={`soc_links ${location === `/` ? `` : `soc_center`}`}>
       <Link to={{ pathname: "https://facebook.com" }} target="_blank">
         <FaFacebook />
       </Link>

@@ -2,15 +2,27 @@
   --primaryColor: #035b96;
   --secondaryColor: #3498db;
   --blackColor: #000;
+  --blackishColor: #3b3b3b;
   --whiteColor: #fff;
   --goldColor: #ffa117;
   --transition: all 0.25s ease-in-out;
   --transparantWhite: rgba(255, 255, 255, 0.5);
+  --transparantBalck: rgba(0, 0, 0, 0.5);
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primaryColor);
+  border: transparent;
 }
 body {
   font-family: "Roboto", sans-serif;
@@ -20,9 +32,19 @@ a {
   color: var(--blackColor);
   text-decoration: none;
 }
+
+nav,
+.home_section,
+.soc_links,
+.about_content,
+.dashboard_content {
+  padding: 0 15rem;
+}
+
 /* Nav Style Begins */
 nav {
-  padding: 1.5rem 15rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   background: var(--transparantWhite);
 }
 .button {
@@ -73,7 +95,6 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0 15rem;
 }
 .home_left {
   display: inherit;
@@ -102,6 +123,7 @@ nav {
   width: 100%;
 }
 .home_right img {
+  width: 75%;
   animation: imgAnimation 3s infinite ease-in-out;
   filter: drop-shadow(-12px 23px 40px #3b3b3b);
 }
@@ -129,7 +151,7 @@ nav {
   right: -715px;
   z-index: -3;
   background-color: var(--secondaryColor);
-  box-shadow: 0 0 30px #3b3b3b;
+  box-shadow: 0 0 30px var(--blackishColor);
 }
 .circle2 {
   height: 1000px;
@@ -150,18 +172,47 @@ nav {
 /* Home Style Ends */
 
 /* Footer Style Begins */
-.soc_links {
-  padding: 0 15rem;
+.soc_center {
+  text-align: center;
 }
 .soc_links a {
+  display: inline-block;
   color: var(--primaryColor);
   font-size: 1.2rem;
-  margin-right: 1rem;
+  margin: 1rem 1rem 0 0;
 }
 .soc_links p {
-  margin-top: 0.5rem;
+  padding-bottom: 2rem;
 }
 .soc_links p > a {
   margin-right: 0;
 }
 /* Footer Style Ends */
+
+/* About Style Begins */
+.banner {
+  min-height: 30vh;
+  background: url("./assets/about_bg.jpg") bottom/cover no-repeat fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner_content {
+  width: 50%;
+  padding: 1rem 2rem;
+  text-align: center;
+  color: var(--primaryColor);
+  background: var(--transparantBalck);
+}
+.banner_content h1,
+.banner_content p {
+  margin: 1rem 0;
+  color: var(--whiteColor);
+  line-height: 160%;
+}
+/* About Style Ends */
+
+/* Dashboard Style Starts */
+
+/* Dashboard Style Ends */

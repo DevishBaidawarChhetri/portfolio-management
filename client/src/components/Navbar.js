@@ -15,10 +15,14 @@ const Navbar = () => {
             </NavLink>
           </div>
           <div className="nav_links">
-            <NavLink activeClassName="menu_active" to="/about">
+            <NavLink activeClassName="menu_active" to="/about" title="About">
               <IoMdInformationCircle />
             </NavLink>
-            <NavLink activeClassName="menu_active" to="/dashboard">
+            <NavLink
+              activeClassName="menu_active"
+              to="/dashboard"
+              title="Dashboard"
+            >
               <GoDashboard />
             </NavLink>
           </div>
