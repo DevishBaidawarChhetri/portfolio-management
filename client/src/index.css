@@ -318,8 +318,9 @@ nav {
   .soc_links p {
     padding-bottom: 1rem;
   }
-  .soc_links p a {
+  .soc_links p > a {
     font-size: 1rem;
+    margin: 0;
   }
   /* Home Ends */
 }

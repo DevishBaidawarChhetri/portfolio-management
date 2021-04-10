@@ -4,7 +4,7 @@ const Stock = require("../model/stockSchema");
 
 router.post("/stock", async (req, res) => {
   const { stock_name, transaction_type, quantity, amount, date } = req.body;
-  console.log(req.body);
+  // console.log(req.body);
   if (!stock_name || !transaction_type || !quantity || !amount) {
     return res.status(422).json({ error: "Please fill all the fields." });
   }
@@ -19,14 +19,14 @@ router.post("/stock", async (req, res) => {
     await stock.save();
     res.status(201).json({ message: "Inserted Successfully." });
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 });
 
-router.get("/stock", async (req, res) => {
+router.get("/stocks", async (req, res) => {
   try {
     const stocks = await Stock.find({});
-    res.status(200).json(stocks);
+    res.status(200).json({data: stocks});
   } catch (error) {
     console.error(error);
   }
