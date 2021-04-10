@@ -143,6 +143,7 @@ nav {
 .circle3 {
   position: fixed;
   border-radius: 50%;
+  transition: var(--transition);
 }
 .circle1 {
   height: 1500px;
@@ -216,3 +217,110 @@ nav {
 /* Dashboard Style Starts */
 
 /* Dashboard Style Ends */
+
+/* Media Queries Starts */
+@media (max-width: 1342px) {
+  /* Home Page Starts */
+  nav,
+  .home_section,
+  .soc_links,
+  .about_content,
+  .dashboard_content {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .left_details .management {
+    text-shadow: 1px 1px 2px #000;
+  }
+  /* Home Page Ends */
+}
+@media (max-width: 991px) {
+  /* Home Page Starts */
+  nav,
+  .home_section,
+  .soc_links,
+  .about_content,
+  .dashboard_content {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .circle1 {
+    bottom: -790px;
+    right: -725px;
+  }
+  .circle2 {
+    bottom: -500px;
+    right: -475px;
+  }
+  .circle3 {
+    bottom: -315px;
+    right: -315px;
+  }
+  .home_right img {
+    width: 100%;
+  }
+  /* Home Page Ends */
+}
+@media (max-width: 768px) {
+  /* Home Page Starts */
+  nav,
+  .home_section,
+  .soc_links,
+  .about_content,
+  .dashboard_content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .home_link {
+    font-size: 1.2rem;
+  }
+  .nav_links {
+    font-size: 1.3rem;
+  }
+  .nav_links a {
+    padding: 0 0.3rem;
+  }
+  .home_section {
+    height: 70vh;
+    flex-direction: column-reverse;
+  }
+  .home_right img {
+    width: 75%;
+    filter: drop-shadow(-3px 15px 10px #3b3b3b);
+  }
+  .home_left {
+    justify-content: center;
+  }
+  .circle1,
+  .circle2,
+  .circle3 {
+    display: none;
+  }
+  .left_details {
+    text-align: center;
+  }
+  .left_details h1 {
+    font-size: 1.3rem;
+    line-height: 200%;
+  }
+  .left_details strong,
+  .left_details .management {
+    font-size: 1.5rem;
+    text-shadow: none;
+  }
+  .soc_links {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .soc_links a {
+    margin: 0 0.5rem 0.5rem;
+  }
+  .soc_links p {
+    padding-bottom: 1rem;
+  }
+  .soc_links p a {
+    font-size: 1rem;
+  }
+  /* Home Ends */
+}
+/* Media Queries Ends */
