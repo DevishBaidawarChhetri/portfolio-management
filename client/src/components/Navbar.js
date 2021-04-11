@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { IoMdInformationCircle } from "react-icons/io";
-import { GoDashboard } from "react-icons/go";
+import { CgLogIn } from "react-icons/cg";
 
 const Navbar = () => {
   return (
@@ -18,12 +18,8 @@ const Navbar = () => {
             <NavLink activeClassName="menu_active" to="/about" title="About">
               <IoMdInformationCircle />
             </NavLink>
-            <NavLink
-              activeClassName="menu_active"
-              to="/dashboard"
-              title="Dashboard"
-            >
-              <GoDashboard />
+            <NavLink activeClassName="menu_active" to="/login" title="Login">
+              <CgLogIn />
             </NavLink>
           </div>
         </div>

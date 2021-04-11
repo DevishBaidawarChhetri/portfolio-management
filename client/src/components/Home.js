@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Img from "../assets/img1.png";
+import ThreeCircles from "./HomeDesign/ThreeCircles";
+import HomeSVG from "../assets/home.svg";
 
 const Home = () => {
   return (
@@ -21,12 +22,10 @@ const Home = () => {
           </div>
         </div>
         <div className="home_right">
-          <img src={Img} alt="Portfolio Management" />
+          <img src={HomeSVG} alt="Portfolio Management" />
         </div>
       </div>
-      <div className="circle1"></div>
-      <div className="circle2"></div>
-      <div className="circle3"></div>
+      <ThreeCircles />
     </>
   );
 };
