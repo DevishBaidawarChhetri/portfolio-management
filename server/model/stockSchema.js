@@ -21,6 +21,10 @@ const stockSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "USER",
+  },
 });
 
 const Stock = mongoose.model("STOCK", stockSchema);

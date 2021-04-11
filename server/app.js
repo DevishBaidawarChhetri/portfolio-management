@@ -14,8 +14,9 @@ app.use(express.json());
 const PORT = process.env.PORT;
 
 // Lnking route files
-app.use(require("./router/stockProvider"));
+app.use(require("./router/user"));
 app.use(require("./router/stock"));
+app.use(require("./router/stockProvider"));
 
 // Server Listening
 app.listen(PORT, () => {
