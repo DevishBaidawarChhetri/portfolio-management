@@ -1,5 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cookieParser = require("cookie-parser");
+
 const app = express();
 dotenv.config({
   path: "./.env",
@@ -10,6 +12,7 @@ require("./db/conn");
 
 // Recognize requests as JSON
 app.use(express.json());
+app.use(cookieParser());
 
 const PORT = process.env.PORT;
 
@@ -17,6 +20,7 @@ const PORT = process.env.PORT;
 app.use(require("./router/user"));
 app.use(require("./router/stock"));
 app.use(require("./router/stockProvider"));
+app.use(require("./router/dashboard"));
 
 // Server Listening
 app.listen(PORT, () => {
