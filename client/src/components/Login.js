@@ -25,11 +25,13 @@ const Login = () => {
       }),
     });
     const data = await res.json();
-    // console.log(data);
+    console.log(data.userId);
     if (res.status === 400 || !data) {
       toast.error(data.error);
     } else {
       toast.success(data.message);
+      // console.log(data.userId);
+      localStorage.setItem("userId", data.userId);
       history.push("/dashboard");
     }
   };

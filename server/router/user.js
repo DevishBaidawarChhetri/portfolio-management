@@ -44,7 +44,7 @@ router.post("/login", async (req, res) => {
       if (!isMatch) {
         res.status(400).json({ error: "Password Incorrect." });
       } else {
-        res.json({ message: "Login successful." });
+        res.json({ userId: userLogin._id, message: "Login successful." });
       }
     } else {
       res.status(400).json({ error: "Incorrect Email." });

@@ -32,7 +32,6 @@ const Dashboard = () => {
           toast.error("Please login to visit dashboard.");
         } else {
           const data = await res.json();
-          // console.log(data.data);
           setStocks(data.data);
 
           // Transaction Type "BUY"

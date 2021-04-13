@@ -12,7 +12,7 @@ const DashboardNav = () => {
         },
         credentials: "include",
       });
-      console.log(res);
+      // console.log(res);
       if (res.status === 200) {
         localStorage.removeItem("userId");
         history.push("/");

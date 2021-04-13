@@ -21,7 +21,6 @@ const BuySaleStock = () => {
           toast.error("Please login to visit dashboard.");
         } else {
           const data = await res.json();
-          localStorage.setItem("userId", data.userId);
           setStockProvider(data.data);
           setFetchingData(false);
         }
