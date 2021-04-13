@@ -29,7 +29,7 @@ const Dashboard = () => {
       if (fetchingData) {
         if (res.status === 401) {
           history.push("/login");
-          toast.error("Please login to visit stocklist.");
+          toast.error("Please login to visit dashboard.");
         } else {
           const data = await res.json();
           // console.log(data.data);
