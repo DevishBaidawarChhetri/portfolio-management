@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 require("../db/conn");
 const User = require("../model/userSchema");
+const auth = require("../middleware/auth");
 
 router.post("/register", async (req, res) => {
   const { name, email, phone, password } = req.body;
@@ -50,6 +51,16 @@ router.post("/login", async (req, res) => {
     }
   } catch (error) {
     console.error(error);
+  }
+});
+
+router.get("/logout", auth, async (req, res) => {
+  try {
+    res.clearCookie("jwttoken");
+    await req.rootUser.save();
+    res.status(200).json({ message: "Logout Successful" });
+  } catch (error) {
+    res.status(500).send(error);
   }
 });
 

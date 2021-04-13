@@ -330,6 +330,12 @@ tr:nth-child(even) {
   margin: 2rem 0 -0.8rem;
   text-align: center;
 }
+.dashboard_nav_link a {
+  margin-right: 0.5rem;
+}
+.stock_list {
+  flex-direction: column;
+}
 /* Dashboard Style Ends */
 
 /* Media Queries Starts */

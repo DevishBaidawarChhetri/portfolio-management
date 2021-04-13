@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const StockList = () => {
@@ -33,7 +34,7 @@ const StockList = () => {
     stocksFetch();
   }, []);
   return (
-    <div className="home_section">
+    <div className="home_section stock_list">
       <table>
         <thead>
           <tr>
@@ -62,6 +63,9 @@ const StockList = () => {
             : ""}
         </tbody>
       </table>
+      <Link to="/dashboard" style={{ marginTop: "1rem" }} className="button">
+        Back to Dashboard
+      </Link>
     </div>
   );
 };
