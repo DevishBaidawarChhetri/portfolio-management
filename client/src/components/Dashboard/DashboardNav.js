@@ -27,6 +27,10 @@ const DashboardNav = () => {
       <Link to={`/stocks`} className="button">
         View Transactions
       </Link>
+      <Link to={`/buysale`} className="button">
+        Buy/Sale Stock
+      </Link>
+
       <span className="button" onClick={userLogout}>
         Logout
       </span>

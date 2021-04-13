@@ -65,7 +65,7 @@ const AddStock = ({ stockProvider }) => {
   return (
     <div className="dashboard_content">
       <div className="form_content buy_sale_content">
-        <h2 className="form_title">Buy/Sale Stock</h2>
+        <h2 className="form_title">Buy/Sell Stock</h2>
         <form className="register_form" id="register_form" method="POST">
           <div className="form_group">
             <RiBankFill size="20" />
@@ -100,11 +100,11 @@ const AddStock = ({ stockProvider }) => {
             <input
               type="radio"
               name="transaction_type"
-              id="sale"
-              value="sale"
+              id="sell"
+              value="sell"
               onChange={handleInputs}
             />
-            <label htmlFor="sale">Sale</label>
+            <label htmlFor="sell">Sell</label>
           </div>
 
           <div className="form_group">

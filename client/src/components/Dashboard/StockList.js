@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import ThreeCircles from "../HomeDesign/ThreeCircles";
 
 const StockList = () => {
   const history = useHistory();
@@ -66,6 +67,7 @@ const StockList = () => {
       <Link to="/dashboard" style={{ marginTop: "1rem" }} className="button">
         Back to Dashboard
       </Link>
+      <ThreeCircles />
     </div>
   );
 };

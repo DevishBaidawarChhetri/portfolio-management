@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { IoMdInformationCircle } from "react-icons/io";
+import { RiDashboardLine } from "react-icons/ri";
 import { CgLogIn } from "react-icons/cg";
 
 const Navbar = () => {
@@ -23,7 +24,7 @@ const Navbar = () => {
             </NavLink>
             {user !== null ? (
               <NavLink activeClassName="menu_active" to="/dashboard">
-                Dashboard
+                <RiDashboardLine />
               </NavLink>
             ) : (
               <NavLink activeClassName="menu_active" to="/login" title="Login">

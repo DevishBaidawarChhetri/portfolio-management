@@ -32,7 +32,7 @@ router.post("/stock", auth, async (req, res) => {
   }
 });
 
-router.get("/stocks/:id", async (req, res) => {
+router.get("/stocks/:id", auth, async (req, res) => {
   // console.log(req.params.id);
   try {
     const stocks = await Stock.find({ userId: req.params.id });

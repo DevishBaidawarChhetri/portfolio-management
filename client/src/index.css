@@ -42,7 +42,8 @@ nav,
 .home_section,
 .soc_links,
 .about_content,
-.dashboard_content {
+.dashboard_content,
+.main_dashboard_nav {
   padding: 0 15rem;
 }
 
@@ -314,15 +315,14 @@ table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  background: var(--whiteColor);
 }
-
 td,
 th {
   border: 1px solid var(--blackishColor);
   text-align: center;
   padding: 8px;
 }
-
 tr:nth-child(even) {
   background-color: #dddddd;
 }
@@ -336,6 +336,65 @@ tr:nth-child(even) {
 .stock_list {
   flex-direction: column;
 }
+.main_dashboard_nav .dashboard_nav_link {
+  margin-bottom: 2rem;
+}
+.buy_sale_data {
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+.buy_sale_data h1 {
+  margin-bottom: 1rem;
+}
+.data_holder {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+.top {
+  height: 100%;
+  display: inherit;
+  flex-direction: row;
+}
+.top_left_box,
+.top_right_box,
+.bottom_left_box,
+.bottom_right_box {
+  display: inherit;
+  width: 50%;
+  background: #ff8282;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 0.5rem;
+  box-shadow: 0 0 20px var(--transparantBalck);
+  flex-direction: inherit;
+}
+.top_right_box {
+  background-color: #6cb2ef;
+}
+.bottom {
+  height: 100%;
+  display: inherit;
+  flex: row;
+}
+.bottom_left_box {
+  background-color: #00ffac;
+}
+.bottom_right_box {
+  background-color: #ebec88;
+}
+.dashboard_data {
+  margin-left: 1rem;
+}
+.profit_loss_data {
+  background-color: var(--whiteColor);
+  text-align: center;
+  padding: 2rem 0;
+  margin: 0 0.5rem;
+  box-shadow: 0 0 20px var(--transparantBalck);
+  border-radius: 1.5rem;
+}
 /* Dashboard Style Ends */
 
 /* Media Queries Starts */
@@ -345,12 +404,13 @@ tr:nth-child(even) {
   .home_section,
   .soc_links,
   .about_content,
-  .dashboard_content {
+  .dashboard_content,
+  .main_dashboard_nav {
     padding-left: 5rem;
     padding-right: 5rem;
   }
   .left_details .management {
-    text-shadow: 1px 1px 2px #000;
+    text-shadow: 1px 1px 2px var(--blackColor);
   }
   /* Home Page Ends */
 }
@@ -360,7 +420,8 @@ tr:nth-child(even) {
   .home_section,
   .soc_links,
   .about_content,
-  .dashboard_content {
+  .dashboard_content,
+  .main_dashboard_nav {
     padding-left: 5rem;
     padding-right: 5rem;
   }
@@ -393,7 +454,8 @@ tr:nth-child(even) {
   .home_section,
   .soc_links,
   .about_content,
-  .dashboard_content {
+  .dashboard_content,
+  .main_dashboard_nav {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
