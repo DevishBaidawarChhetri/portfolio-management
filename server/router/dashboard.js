@@ -6,7 +6,7 @@ const auth = require("../middleware/auth");
 router.get("/dashboard", auth, async (req, res) => {
   try {
     const stockNames = await StockProvider.find({});
-    res.status(200).json({ data: stockNames });
+    res.status(200).json({ userId: req.rootUser._id, data: stockNames });
   } catch (error) {
     console.error(error);
   }

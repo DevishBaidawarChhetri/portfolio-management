@@ -1,15 +1,24 @@
 const express = require("express");
 const router = express.Router();
 const Stock = require("../model/stockSchema");
+const auth = require("../middleware/auth");
 
-router.post("/stock", async (req, res) => {
-  const { stock_name, transaction_type, quantity, amount, date } = req.body;
+router.post("/stock", auth, async (req, res) => {
+  const {
+    userId,
+    stock_name,
+    transaction_type,
+    quantity,
+    amount,
+    date,
+  } = req.body;
   // console.log(req.body);
-  if (!stock_name || !transaction_type || !quantity || !amount) {
+  if (!userId || !stock_name || !transaction_type || !quantity || !amount) {
     return res.status(422).json({ error: "Please fill all the fields." });
   }
   try {
     const stock = new Stock({
+      userId,
       stock_name,
       transaction_type,
       quantity,
@@ -17,7 +26,7 @@ router.post("/stock", async (req, res) => {
       date,
     });
     await stock.save();
-    res.status(201).json({ message: "Inserted Successfully." });
+    res.status(201).json({ message: "Transaction Successful!" });
   } catch (error) {
     console.error(error);
   }
@@ -26,7 +35,7 @@ router.post("/stock", async (req, res) => {
 router.get("/stocks", async (req, res) => {
   try {
     const stocks = await Stock.find({});
-    res.status(200).json({data: stocks});
+    res.status(200).json({ data: stocks });
   } catch (error) {
     console.error(error);
   }

@@ -1,6 +1,10 @@
 const mongoose = require("mongoose");
 
 const stockSchema = new mongoose.Schema({
+  userId: {
+    type: String,
+    required: true,
+  },
   stock_name: {
     type: String,
     required: true,
@@ -20,10 +24,6 @@ const stockSchema = new mongoose.Schema({
   date: {
     type: Date,
     default: Date.now,
-  },
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "USER",
   },
 });
 

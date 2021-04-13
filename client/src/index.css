@@ -273,6 +273,9 @@ select {
   border-radius: 0;
   background: transparent;
 }
+select {
+  cursor: pointer;
+}
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"],
@@ -302,6 +305,10 @@ input[type="submit"] {
 }
 .buy_sale_content {
   flex-direction: column;
+}
+.dashboard_content .form_group label {
+  margin-left: 0;
+  cursor: pointer;
 }
 /* Dashboard Style Ends */
 
@@ -445,10 +452,6 @@ input[type="submit"] {
   }
   .dashboard_content .form_title {
     margin-bottom: 1rem;
-  }
-  .dashboard_content .form_group label {
-    margin-left: 0;
-    cursor: pointer;
   }
   /* Dashboard Styles Ends */
   /* Login Page Ends */
