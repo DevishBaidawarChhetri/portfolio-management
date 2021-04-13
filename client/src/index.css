@@ -262,7 +262,9 @@ nav {
 input[type="text"],
 input[type="email"],
 input[type="password"],
-input[type="number"] {
+input[type="number"],
+input[type="radio"],
+select {
   font-size: 1.2rem;
   padding: 0.5rem;
   margin: 0 0.4rem;
@@ -274,7 +276,9 @@ input[type="number"] {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"],
-input[type="number"]:focus {
+input[type="number"]:focus,
+input[type="radio"]:focus,
+select:focus {
   outline: 0;
 }
 input[type="submit"] {
@@ -289,6 +293,17 @@ input[type="submit"] {
   border: none;
 }
 /* Registration Style Ends */
+
+/* Dashboard Style Begins */
+.dashboard_content {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0;
+}
+.buy_sale_content {
+  flex-direction: column;
+}
+/* Dashboard Style Ends */
 
 /* Media Queries Starts */
 @media (max-width: 1342px) {
@@ -424,6 +439,18 @@ input[type="submit"] {
   input[type="number"] {
     font-size: 1rem;
   }
+  /* Dashboard Styles Begins */
+  .dashboard_content .form_content {
+    flex-direction: column;
+  }
+  .dashboard_content .form_title {
+    margin-bottom: 1rem;
+  }
+  .dashboard_content .form_group label {
+    margin-left: 0;
+    cursor: pointer;
+  }
+  /* Dashboard Styles Ends */
   /* Login Page Ends */
 }
 /* Media Queries Ends */

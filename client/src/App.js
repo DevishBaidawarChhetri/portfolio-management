@@ -4,7 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Login from "./components/Login";
 import Register from "./components/Register";
-import Dashboard from "./components/Dashboard";
+import Dashboard from "./components/Dashboard/Dashboard";
 import Navbar from "./components/Navbar";
 import "./index.css";
 import Footer from "./components/Footer";
