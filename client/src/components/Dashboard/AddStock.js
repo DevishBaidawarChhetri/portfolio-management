@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BiCodeCurly, BiDollarCircle } from "react-icons/bi";
+import { BiDollarCircle } from "react-icons/bi";
 import { HiOutlinePlusCircle } from "react-icons/hi";
 import { AiOutlineTransaction } from "react-icons/ai";
 import { RiBankFill } from "react-icons/ri";
@@ -58,7 +58,7 @@ const AddStock = ({ stockProvider }) => {
         quantity: "",
         price: "",
       });
-      history.push("/dashboard");
+      history.push("/stocks");
     }
   };
 

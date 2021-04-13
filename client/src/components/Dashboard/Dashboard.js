@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../Banner/Banner";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 import AddStock from "./AddStock";
+import DashboardNav from "./DashboardNav";
 
 const Dashboard = () => {
   const history = useHistory();
@@ -32,11 +33,12 @@ const Dashboard = () => {
 
   useEffect(() => {
     callDashboard();
-  }, [stockProvider]);
+  }, []);
 
   return (
     <div className="dashboard_section">
       <Banner title="Your Dashboard" />
+      <DashboardNav />
       <AddStock stockProvider={stockProvider} />
     </div>
   );

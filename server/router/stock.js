@@ -32,9 +32,10 @@ router.post("/stock", auth, async (req, res) => {
   }
 });
 
-router.get("/stocks", async (req, res) => {
+router.get("/stocks/:id", async (req, res) => {
+  // console.log(req.params.id);
   try {
-    const stocks = await Stock.find({});
+    const stocks = await Stock.find({ userId: req.params.id });
     res.status(200).json({ data: stocks });
   } catch (error) {
     console.error(error);

@@ -310,6 +310,26 @@ input[type="submit"] {
   margin-left: 0;
   cursor: pointer;
 }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid var(--blackishColor);
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.dashboard_nav_link {
+  margin: 2rem 0 -0.8rem;
+  text-align: center;
+}
 /* Dashboard Style Ends */
 
 /* Media Queries Starts */
