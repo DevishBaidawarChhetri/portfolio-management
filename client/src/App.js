@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BuySaleStock from "./components/Dashboard/BuySaleStock";
+import IndividualStock from "./components/Dashboard/IndividualStock";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/buysale" component={BuySaleStock} />
         <Route exact path="/stocks" component={StockList} />
+        <Route exact path="/individualStocks" component={IndividualStock} />
         <Redirect to="/" />
       </Switch>
       <Footer />

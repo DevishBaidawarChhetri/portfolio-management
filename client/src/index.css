@@ -415,6 +415,9 @@ tr:nth-child(even) {
   box-shadow: 0 0 20px var(--transparantBalck);
   border-radius: 1.5rem;
 }
+.select {
+  text-align: center;
+}
 /* Dashboard Style Ends */
 
 /* Media Queries Starts */

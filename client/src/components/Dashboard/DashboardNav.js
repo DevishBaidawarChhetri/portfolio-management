@@ -30,6 +30,9 @@ const DashboardNav = () => {
       <Link to={`/buysale`} className="button">
         Buy/Sale Stock
       </Link>
+      <Link to={`/individualStocks`} className="button">
+        Individual Stock
+      </Link>
 
       <span className="button" onClick={userLogout}>
         Logout
