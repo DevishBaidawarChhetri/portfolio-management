@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BiDollarCircle } from "react-icons/bi";
 import { HiOutlinePlusCircle } from "react-icons/hi";
 import { AiOutlineTransaction } from "react-icons/ai";
@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 const AddStock = ({ stockProvider }) => {
   const history = useHistory();
   const userIid = localStorage.getItem("userId");
+  const [chooseProvider, setchooseProvider] = useState([]);
   const [transaction, setTransaction] = useState({
     userId: userIid,
     stock_provider: "",
@@ -16,6 +17,14 @@ const AddStock = ({ stockProvider }) => {
     quantity: "",
     price: "",
   });
+
+  useEffect(() => {
+    let stockList = [];
+    stockProvider &&
+      stockProvider.map((item) => stockList.push(item.stock_provider));
+
+    setchooseProvider(["Choose Stock Provider", ...stockList]);
+  }, [stockProvider]);
 
   const handleInputs = (e) => {
     let name = e.target.name;
@@ -74,13 +83,10 @@ const AddStock = ({ stockProvider }) => {
               value={transaction.stock_provider}
               onChange={handleInputs}
             >
-              {stockProvider !== undefined
-                ? stockProvider.map((sProvider) => (
-                    <option
-                      key={sProvider._id}
-                      value={sProvider.stock_provider}
-                    >
-                      {sProvider.stock_provider}
+              {chooseProvider !== undefined
+                ? chooseProvider.map((sProvider, index) => (
+                    <option key={index} value={sProvider}>
+                      {sProvider}
                     </option>
                   ))
                 : ""}

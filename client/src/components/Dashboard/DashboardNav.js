@@ -28,7 +28,7 @@ const DashboardNav = () => {
         View Transactions
       </Link>
       <Link to={`/buysale`} className="button">
-        Buy/Sale Stock
+        Buy/Sell Stock
       </Link>
       <Link to={`/individualStocks`} className="button">
         Individual Stock
