@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import ThreeCircles from "./HomeDesign/ThreeCircles";
 import LoginSVG from "../assets/login.svg";
 import { Link } from "react-router-dom";
@@ -6,8 +6,11 @@ import { MdEmail } from "react-icons/md";
 import { CgPassword } from "react-icons/cg";
 import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
+import { UserContext } from "../App";
 
 const Login = () => {
+  const { state, dispatch } = useContext(UserContext);
+
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -29,8 +32,8 @@ const Login = () => {
     if (res.status === 400 || !data) {
       toast.error(data.error);
     } else {
+      dispatch({ type: "USER", payload: true });
       toast.success(data.message);
-      // console.log(data.userId);
       localStorage.setItem("userId", data.userId);
       history.push("/dashboard");
     }
